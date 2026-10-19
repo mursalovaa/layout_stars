@@ -1,1 +1,47 @@
 /* add styles here */
+body {
+  margin: 0; /* скидаємо стандартні відступи браузера */
+}
+
+.stars {
+  display: flex; /* вишиковуємо в рядок без зайвих пробілів */
+}
+
+.stars__star {
+  width: 16px;   /* Приклад розміру з Figma (підстав значення зі свого макета) */
+  height: 16px;
+  background-image: url('./images/star.svg'); /* шлях до неактивної зірочки */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Відступи між зірочками за допомогою margin-right, але без останньої */
+
+.stars__star:not(:last-child) {
+  margin-right: 4px; /* Приклад відстані з Figma */
+}
+
+/* Для stars--1: перша зірочка активна */
+.stars--1 .stars__star:nth-child(-n + 1) {
+  background-image: url('./images/star-active.svg');
+}
+
+/* Для stars--2: перші дві зірочки активні */
+.stars--2 .stars__star:nth-child(-n + 2) {
+  background-image: url('./images/star-active.svg');
+}
+
+/* Для stars--3: перші три зірочки активні */
+.stars--3 .stars__star:nth-child(-n + 3) {
+  background-image: url('./images/star-active.svg');
+}
+
+/* Для stars--4: перші чотири зірочки активні */
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url('./images/star-active.svg');
+}
+
+/* Для stars--5: усі п'ять зірочок активні */
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url('./images/star-active.svg');
+}
